@@ -70,6 +70,7 @@ flutter:
   assets:
     - resources/images/logo/App_Logo.png
     - resources/images/splash/App_Splash.png
+    - resources/texts/stotras/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
