@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/utils/constants.dart';
+import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
 import 'package:table_calendar/table_calendar.dart';
 
 class EventCalendarScreen extends StatefulWidget {
@@ -16,9 +16,11 @@ class _EventCalendarScreenState extends State<EventCalendarScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context);
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text(Constants.calendarTitle),
+        title: Text(localizations.calendarTitle),
       ),
       body: Column(
         children: [
@@ -49,18 +51,18 @@ class _EventCalendarScreenState extends State<EventCalendarScreen> {
           ),
           const SizedBox(height: 8.0),
           Expanded(
-            child: _buildEventList(),
+            child: _buildEventList(localizations),
           ),
         ],
       ),
     );
   }
 
-  Widget _buildEventList() {
+  Widget _buildEventList(AppLocalizations localizations) {
     return ListView(
-      children: const [
+      children: [
         ListTile(
-          title: Text('Event on selected date will be shown here.'),
+          title: Text(localizations.eventOnDate),
         )
       ], // Placeholder for events
     );

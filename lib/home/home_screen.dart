@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/utils/constants.dart';
+import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/utils/routes.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -7,22 +7,28 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context);
+
     final List<Map<String, dynamic>> modules = [
-      {'title': Constants.granthTitle, 'icon': Icons.book, 'route': Routes.granth},
-      {'title': Constants.stotraTitle, 'icon': Icons.queue_music, 'route': Routes.stotra},
-      {'title': Constants.namavaliTitle, 'icon': Icons.format_list_numbered, 'route': Routes.namavali},
-      {'title': Constants.aartiTitle, 'icon': Icons.audiotrack, 'route': Routes.aarti},
-      {'title': Constants.bhajanTitle, 'icon': Icons.music_note, 'route': Routes.bhajan},
-      {'title': Constants.sankalpTitle, 'icon': Icons.calendar_today, 'route': Routes.sankalp},
-      {'title': Constants.parayanTitle, 'icon': Icons.group_work, 'route': Routes.parayan},
-      {'title': Constants.aboutMaharajTitle, 'icon': Icons.info, 'route': Routes.aboutMaharaj},
-      {'title': Constants.calendarTitle, 'icon': Icons.event, 'route': Routes.calendar},
-      {'title': Constants.donationsTitle, 'icon': Icons.volunteer_activism, 'route': Routes.donations},
+      {'title': localizations.granthTitle, 'icon': Icons.book, 'route': Routes.granth},
+      {'title': localizations.stotraTitle, 'icon': Icons.queue_music, 'route': Routes.stotra},
+      {'title': localizations.namavaliTitle, 'icon': Icons.format_list_numbered, 'route': Routes.namavali},
+      {'title': localizations.aartiTitle, 'icon': Icons.audiotrack, 'route': Routes.aarti},
+      {'title': localizations.bhajanTitle, 'icon': Icons.music_note, 'route': Routes.bhajan},
+      {'title': localizations.sankalpTitle, 'icon': Icons.calendar_today, 'route': Routes.sankalp},
+      {'title': localizations.parayanTitle, 'icon': Icons.group_work, 'route': Routes.parayan},
+      {'title': localizations.aboutMaharajTitle, 'icon': Icons.info, 'route': Routes.aboutMaharaj},
+      {'title': localizations.calendarTitle, 'icon': Icons.event, 'route': Routes.calendar},
+      {'title': localizations.donationsTitle, 'icon': Icons.volunteer_activism, 'route': Routes.donations},
     ];
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(Constants.appName),
+        leading: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Image.asset('resources/images/logo/App_Logo.png'),
+        ),
+        title: Text(localizations.appName),
         actions: [
           IconButton(
             icon: const Icon(Icons.settings),
@@ -32,7 +38,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: Column(
         children: [
-          _buildUpcomingEventCard(context),
+          _buildUpcomingEventCard(context, localizations),
           Expanded(
             child: GridView.builder(
               padding: const EdgeInsets.all(8.0),
@@ -58,7 +64,7 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  Widget _buildUpcomingEventCard(BuildContext context) {
+  Widget _buildUpcomingEventCard(BuildContext context, AppLocalizations localizations) {
     return Card(
       margin: const EdgeInsets.all(8.0),
       elevation: 4.0,
@@ -68,14 +74,14 @@ class HomeScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
-              'Upcoming Event',
+              localizations.upcomingEvent,
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
                     fontWeight: FontWeight.bold,
                     color: Theme.of(context).colorScheme.primary,
                   ),
             ),
             const SizedBox(height: 8.0),
-            const Text('Prakat Din Utsav'),
+            Text(localizations.prakatDinUtsav),
             const Text('February 21, 2025'),
           ],
         ),

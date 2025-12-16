@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/settings/about_app_screen.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/settings/disclaimer_screen.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/settings/language_selection_screen.dart';
@@ -9,22 +10,24 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context);
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Settings'),
+        title: Text(localizations.settings),
       ),
       body: ListView(
         children: [
-          _buildSettingsItem(context, 'Language', Icons.language, () {
+          _buildSettingsItem(context, localizations.language, Icons.language, () {
             Navigator.push(context, MaterialPageRoute(builder: (context) => const LanguageSelectionScreen()));
           }),
-          _buildSettingsItem(context, 'Theme', Icons.color_lens, () {
+          _buildSettingsItem(context, localizations.theme, Icons.color_lens, () {
             Navigator.push(context, MaterialPageRoute(builder: (context) => const ThemeSelectionScreen()));
           }),
-          _buildSettingsItem(context, 'About', Icons.info, () {
+          _buildSettingsItem(context, localizations.about, Icons.info, () {
             Navigator.push(context, MaterialPageRoute(builder: (context) => const AboutAppScreen()));
           }),
-          _buildSettingsItem(context, 'Disclaimer', Icons.gavel, () {
+          _buildSettingsItem(context, localizations.disclaimer, Icons.gavel, () {
             Navigator.push(context, MaterialPageRoute(builder: (context) => const DisclaimerScreen()));
           }),
         ],

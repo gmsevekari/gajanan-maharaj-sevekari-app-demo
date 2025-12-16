@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/stotra/stotra_detail_screen.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/utils/constants.dart';
 
 class StotraScreen extends StatelessWidget {
   const StotraScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context);
+
     final List<String> stotras = [
-      'Gajanan Maharaj Avahan',
-      'Gajanan Maharaj Bavanni',
+      localizations.stotraAvahan,
+      localizations.stotraBavanni,
     ];
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(Constants.stotraTitle),
+        title: Text(localizations.stotraTitle),
       ),
       body: ListView.builder(
         itemCount: stotras.length,

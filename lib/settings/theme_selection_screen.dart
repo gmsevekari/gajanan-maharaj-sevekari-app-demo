@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/settings/theme_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -7,9 +8,11 @@ class ThemeSelectionScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context);
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Theme Selection'),
+        title: Text(localizations.theme),
       ),
       body: Consumer<ThemeProvider>(
         builder: (context, themeProvider, child) {
@@ -19,19 +22,19 @@ class ThemeSelectionScreen extends StatelessWidget {
               children: [
                 _buildThemeOption(
                   context,
-                  'Light Theme',
+                  localizations.lightTheme,
                   themeProvider.themeMode == ThemeMode.light,
                   () => themeProvider.setTheme(ThemeMode.light),
                 ),
                 _buildThemeOption(
                   context,
-                  'Dark Theme',
+                  localizations.darkTheme,
                   themeProvider.themeMode == ThemeMode.dark,
                   () => themeProvider.setTheme(ThemeMode.dark),
                 ),
                 _buildThemeOption(
                   context,
-                  'System Theme',
+                  localizations.systemTheme,
                   themeProvider.themeMode == ThemeMode.system,
                   () => themeProvider.setTheme(ThemeMode.system),
                 ),

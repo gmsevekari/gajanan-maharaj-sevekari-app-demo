@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/utils/constants.dart';
+import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class DonationsScreen extends StatelessWidget {
@@ -7,9 +7,11 @@ class DonationsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context);
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text(Constants.donationsTitle),
+        title: Text(localizations.donationsTitle),
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
@@ -17,10 +19,10 @@ class DonationsScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const Center(
+            Center(
               child: Text(
-                'Zelle QR Code Placeholder',
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                localizations.zelleQRCode,
+                style: const TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
             ),
             const SizedBox(height: 20),
@@ -32,16 +34,16 @@ class DonationsScreen extends StatelessWidget {
                 border: Border.all(color: Colors.grey),
                 borderRadius: BorderRadius.circular(12),
               ),
-              child: const Center(child: Text('QR Code Here')),
+              child: Center(child: Text(localizations.qrCodeHere)),
             ),
             const SizedBox(height: 40),
             ElevatedButton(
-              onPressed: () => _launchZelle(context),
+              onPressed: () => _launchZelle(context, localizations),
               style: ElevatedButton.styleFrom(
                 padding: const EdgeInsets.symmetric(vertical: 16),
               ),
-              child: const Text(
-                'Donate via Zelle to gajananmaharajseattle@gmail.com',
+              child: Text(
+                localizations.donateViaZelle,
                 textAlign: TextAlign.center,
               ),
             ),
@@ -51,13 +53,13 @@ class DonationsScreen extends StatelessWidget {
     );
   }
 
-  void _launchZelle(BuildContext context) async {
+  void _launchZelle(BuildContext context, AppLocalizations localizations) async {
     const zelleUrl = 'mailto:gajananmaharajseattle@gmail.com'; // Zelle URLs can be complex; this is a simple mailto link.
     if (await canLaunchUrl(Uri.parse(zelleUrl))) {
       await launchUrl(Uri.parse(zelleUrl));
     } else {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Could not open Zelle.')),
+        SnackBar(content: Text(localizations.couldNotOpenZelle)),
       );
     }
   }

@@ -1,22 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/aarti/aarti_list_screen.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/utils/constants.dart';
+import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
 
 class AartiScreen extends StatelessWidget {
   const AartiScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context);
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text(Constants.aartiTitle),
+        title: Text(localizations.aartiTitle),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            _buildCategoryCard(context, 'Daily Aartis', AartiCategory.daily),
-            _buildCategoryCard(context, 'Event Aartis', AartiCategory.event),
+            _buildCategoryCard(context, localizations.dailyAartis, AartiCategory.daily),
+            _buildCategoryCard(context, localizations.eventAartis, AartiCategory.event),
           ],
         ),
       ),

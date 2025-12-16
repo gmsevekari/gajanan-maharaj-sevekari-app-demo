@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/granth/granth_adhyay_detail_screen.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/utils/constants.dart';
+import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
 
 class GranthScreen extends StatelessWidget {
   const GranthScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context);
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text(Constants.granthTitle),
+        title: Text(localizations.granthTitle),
       ),
       body: ListView.builder(
         itemCount: 21,
@@ -25,7 +27,7 @@ class GranthScreen extends StatelessWidget {
                   style: const TextStyle(color: Colors.white),
                 ),
               ),
-              title: Text('Adhyay $adhyayNumber'),
+              title: Text('${localizations.adhyay} $adhyayNumber'),
               onTap: () {
                 Navigator.push(
                   context,

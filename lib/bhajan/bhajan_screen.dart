@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/bhajan/bhajan_detail_screen.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/utils/constants.dart';
+import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
 
 class BhajanScreen extends StatelessWidget {
   const BhajanScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context);
+
     final List<String> bhajans = [
-      'Gajananachya Charani Julavu',
-      'Murti Ahe Shegaonla',
+      localizations.bhajanGajananachya,
+      localizations.bhajanMurtiAhe,
     ];
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(Constants.bhajanTitle),
+        title: Text(localizations.bhajanTitle),
       ),
       body: ListView.builder(
         itemCount: bhajans.length,

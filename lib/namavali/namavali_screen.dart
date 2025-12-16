@@ -1,16 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/utils/constants.dart';
+import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
 
 class NamavaliScreen extends StatelessWidget {
   const NamavaliScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final List<String> namavali = List.generate(108, (index) => 'Name ${index + 1}');
+    final localizations = AppLocalizations.of(context);
+
+    final List<String> namavali = List.generate(108, (index) => '${localizations.name} ${index + 1}');
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text(Constants.namavaliTitle),
+        title: Text(localizations.namavaliTitle),
       ),
       body: ListView.builder(
         itemCount: namavali.length,

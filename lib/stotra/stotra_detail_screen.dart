@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
 
 class StotraDetailScreen extends StatefulWidget {
   final String stotraTitle;
@@ -27,14 +28,16 @@ class _StotraDetailScreenState extends State<StotraDetailScreen>
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context);
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.stotraTitle),
         bottom: TabBar(
           controller: _tabController,
-          tabs: const [
-            Tab(text: 'Read'),
-            Tab(text: 'Listen'),
+          tabs: [
+            Tab(text: localizations.read),
+            Tab(text: localizations.listen),
           ],
         ),
       ),

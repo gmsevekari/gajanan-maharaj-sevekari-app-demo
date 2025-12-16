@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/parayan/parayan_type.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -40,11 +41,13 @@ class _ParayanProgressChecklistScreenState
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context);
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.parayanType == ParayanType.oneDay
-            ? '1-Day Parayan Progress'
-            : '3-Day Parayan Progress'),
+            ? localizations.oneDayParayanProgress
+            : localizations.threeDayParayanProgress),
       ),
       body: FutureBuilder<List<bool>>(
         future: _loadProgressFuture,
@@ -54,7 +57,7 @@ class _ParayanProgressChecklistScreenState
           } else if (snapshot.hasError) {
             return const Center(child: Text('Error loading progress'));
           } else if (snapshot.hasData) {
-            return _buildChecklist();
+            return _buildChecklist(localizations);
           } else {
             return const Center(child: Text('No progress found'));
           }
@@ -63,21 +66,21 @@ class _ParayanProgressChecklistScreenState
     );
   }
 
-  Widget _buildChecklist() {
+  Widget _buildChecklist(AppLocalizations localizations) {
     if (widget.parayanType == ParayanType.oneDay) {
-      return _buildDayList(1, 21);
+      return _buildDayList(1, 21, localizations);
     } else {
       return ListView(
         children: [
-          _buildDayCard(1, 1, 9),
-          _buildDayCard(2, 10, 15),
-          _buildDayCard(3, 16, 21),
+          _buildDayCard(1, 1, 9, localizations),
+          _buildDayCard(2, 10, 15, localizations),
+          _buildDayCard(3, 16, 21, localizations),
         ],
       );
     }
   }
 
-  Widget _buildDayCard(int day, int startAdhyay, int endAdhyay) {
+  Widget _buildDayCard(int day, int startAdhyay, int endAdhyay, AppLocalizations localizations) {
     return Card(
       margin: const EdgeInsets.all(8.0),
       child: Padding(
@@ -85,15 +88,15 @@ class _ParayanProgressChecklistScreenState
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('Day $day', style: Theme.of(context).textTheme.titleLarge),
-            _buildDayList(startAdhyay, endAdhyay),
+            Text('${localizations.day} $day', style: Theme.of(context).textTheme.titleLarge),
+            _buildDayList(startAdhyay, endAdhyay, localizations),
           ],
         ),
       ),
     );
   }
 
-  Widget _buildDayList(int startAdhyay, int endAdhyay) {
+  Widget _buildDayList(int startAdhyay, int endAdhyay, AppLocalizations localizations) {
     return ListView.builder(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
@@ -101,7 +104,7 @@ class _ParayanProgressChecklistScreenState
       itemBuilder: (context, index) {
         final adhyayNumber = startAdhyay + index;
         return CheckboxListTile(
-          title: Text('Adhyay $adhyayNumber'),
+          title: Text('${localizations.adhyay} $adhyayNumber'),
           value: _completedAdhyays[adhyayNumber - 1],
           onChanged: (bool? value) {
             if (value != null) {

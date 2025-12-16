@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
 
 class DisclaimerScreen extends StatelessWidget {
   const DisclaimerScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context);
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Disclaimer'),
+        title: Text(localizations.disclaimer),
       ),
       body: const SingleChildScrollView(
         padding: EdgeInsets.all(16.0),

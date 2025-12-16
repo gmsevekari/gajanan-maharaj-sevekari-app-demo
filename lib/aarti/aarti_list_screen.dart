@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/aarti/aarti_detail_screen.dart';
+import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
 
 enum AartiCategory { daily, event }
 
@@ -10,8 +11,9 @@ class AartiListScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<String> aartis = _getAartisForCategory();
-    final String title = category == AartiCategory.daily ? 'Daily Aartis' : 'Event Aartis';
+    final localizations = AppLocalizations.of(context);
+    final List<String> aartis = _getAartisForCategory(localizations);
+    final String title = category == AartiCategory.daily ? localizations.dailyAartis : localizations.eventAartis;
 
     return Scaffold(
       appBar: AppBar(
@@ -41,22 +43,22 @@ class AartiListScreen extends StatelessWidget {
     );
   }
 
-  List<String> _getAartisForCategory() {
+  List<String> _getAartisForCategory(AppLocalizations localizations) {
     if (category == AartiCategory.daily) {
       return [
-        'Kakad Aarti',
-        'Madhyan Aarti',
-        'Dhoop Aarti',
-        'Shej Aarti',
+        localizations.kakadAarti,
+        localizations.madhyanAarti,
+        localizations.dhoopAarti,
+        localizations.shejAarti,
       ];
     } else {
       return [
-        'Prakat Din Aarti',
-        'Ashadhi Ekadashi Aarti',
-        'Datta Jayanti Aarti',
-        'Ram Navami Aarti',
-        'Akshay Tritiya Aarti',
-        'Rushi Panchami Aarti',
+        localizations.prakatDinAarti,
+        localizations.ashadhiEkadashiAarti,
+        localizations.dattaJayantiAarti,
+        localizations.ramNavamiAarti,
+        localizations.akshayTritiyaAarti,
+        localizations.rushiPanchamiAarti,
       ];
     }
   }

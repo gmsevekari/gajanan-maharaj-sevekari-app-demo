@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/about_maharaj/about_maharaj_screen.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/aarti/aarti_screen.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/app_theme.dart';
@@ -7,27 +8,31 @@ import 'package:gajanan_maharaj_sevekari_app_demo/donations/donations_screen.dar
 import 'package:gajanan_maharaj_sevekari_app_demo/event_calendar/event_calendar_screen.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/granth/granth_screen.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/home/home_screen.dart';
+import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/namavali/namavali_screen.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/parayan/parayan_screen.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/sankalp/sankalp_screen.dart';
+import 'package:gajanan_maharaj_sevekari_app_demo/settings/locale_provider.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/settings/settings_screen.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/settings/theme_provider.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/stotra/stotra_screen.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/utils/constants.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/utils/routes.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
-  // Ensure Flutter is ready.
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Create and load the theme provider before the app starts.
   final themeProvider = ThemeProvider();
-  await themeProvider.loadTheme();
+  final localeProvider = LocaleProvider();
+
+  await Future.wait([themeProvider.loadTheme(), localeProvider.loadLocale()]);
 
   runApp(
-    ChangeNotifierProvider.value(
-      value: themeProvider, // Use .value since the provider is already created.
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider.value(value: themeProvider),
+        ChangeNotifierProvider.value(value: localeProvider),
+      ],
       child: const MyApp(),
     ),
   );
@@ -38,13 +43,21 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<ThemeProvider>(
-      builder: (context, themeProvider, child) {
+    return Consumer2<ThemeProvider, LocaleProvider>(
+      builder: (context, themeProvider, localeProvider, child) {
         return MaterialApp(
-          title: Constants.appName,
+          onGenerateTitle: (context) => AppLocalizations(localeProvider.locale).appName,
           theme: AppTheme.lightTheme,
           darkTheme: AppTheme.darkTheme,
           themeMode: themeProvider.themeMode,
+          locale: localeProvider.locale,
+          supportedLocales: const [Locale('en', ''), Locale('mr', '')],
+          localizationsDelegates: const [
+            AppLocalizationsDelegate(),
+            GlobalMaterialLocalizations.delegate,
+            GlobalWidgetsLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
           initialRoute: Routes.home,
           routes: {
             Routes.home: (context) => const HomeScreen(),

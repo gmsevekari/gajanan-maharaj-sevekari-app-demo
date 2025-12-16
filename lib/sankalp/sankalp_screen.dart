@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/utils/constants.dart';
+import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
 import 'package:intl/intl.dart';
 
 class SankalpScreen extends StatefulWidget {
@@ -15,9 +15,10 @@ class _SankalpScreenState extends State<SankalpScreen> {
   String _sankalpText = '';
 
   void _generateSankalp() {
+    final localizations = AppLocalizations.of(context);
+    final formattedDate = DateFormat.yMMMMd().format(_selectedDate);
     setState(() {
-      final formattedDate = DateFormat.yMMMMd().format(_selectedDate);
-      _sankalpText = 'Sankalp for ${_locationController.text} on $formattedDate will be generated here based on the Sampurna Chaturmas book.';
+      _sankalpText = localizations.getSankalpGenerated(_locationController.text, formattedDate);
     });
   }
 
@@ -37,9 +38,11 @@ class _SankalpScreenState extends State<SankalpScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context);
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text(Constants.sankalpTitle),
+        title: Text(localizations.sankalpTitle),
       ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16.0),
@@ -48,9 +51,9 @@ class _SankalpScreenState extends State<SankalpScreen> {
           children: [
             TextField(
               controller: _locationController,
-              decoration: const InputDecoration(
-                labelText: 'Location',
-                border: OutlineInputBorder(),
+              decoration: InputDecoration(
+                labelText: localizations.location,
+                border: const OutlineInputBorder(),
               ),
             ),
             const SizedBox(height: 16.0),
@@ -58,20 +61,20 @@ class _SankalpScreenState extends State<SankalpScreen> {
               children: [
                 Expanded(
                   child: Text(
-                    'Date: ${DateFormat.yMMMMd().format(_selectedDate)}',
+                    '${localizations.date}: ${DateFormat.yMMMMd().format(_selectedDate)}',
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                 ),
                 ElevatedButton(
                   onPressed: () => _selectDate(context),
-                  child: const Text('Select Date'),
+                  child: Text(localizations.selectDate),
                 ),
               ],
             ),
             const SizedBox(height: 24.0),
             ElevatedButton(
               onPressed: _generateSankalp,
-              child: const Text('Generate Sankalp'),
+              child: Text(localizations.generateSankalp),
             ),
             const SizedBox(height: 24.0),
             if (_sankalpText.isNotEmpty)

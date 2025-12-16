@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
 
 class AartiDetailScreen extends StatefulWidget {
   final String aartiTitle;
@@ -29,6 +30,8 @@ class _AartiDetailScreenState extends State<AartiDetailScreen>
 
   @override
   Widget build(BuildContext context) {
+    final localizations = AppLocalizations.of(context);
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.aartiTitle),
@@ -46,9 +49,9 @@ class _AartiDetailScreenState extends State<AartiDetailScreen>
         ],
         bottom: TabBar(
           controller: _tabController,
-          tabs: const [
-            Tab(text: 'Read'),
-            Tab(text: 'Listen'),
+          tabs: [
+            Tab(text: localizations.read),
+            Tab(text: localizations.listen),
           ],
         ),
       ),
