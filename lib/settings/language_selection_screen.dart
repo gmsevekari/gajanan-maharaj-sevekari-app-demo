@@ -42,17 +42,15 @@ class LanguageSelectionScreen extends StatelessWidget {
 
   Widget _buildLanguageOption(
       BuildContext context, String title, bool isSelected, VoidCallback onTap) {
-    final isDarkMode = Theme.of(context).brightness == Brightness.dark;
-
     Color cardColor;
     Color textColor;
 
     if (isSelected) {
-      cardColor = Colors.orange[100]!;
+      cardColor = Colors.orange[200]!;
       textColor = Colors.orange[800]!;
     } else {
-      cardColor = isDarkMode ? Colors.grey[850]! : Colors.white;
-      textColor = isDarkMode ? Colors.white70 : Colors.black87;
+      cardColor = Colors.orange[50]!;
+      textColor = Colors.orange[600]!;
     }
 
     return Card(

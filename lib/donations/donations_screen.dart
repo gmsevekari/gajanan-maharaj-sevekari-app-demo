@@ -10,7 +10,7 @@ class DonationsScreen extends StatelessWidget {
     final localizations = AppLocalizations.of(context);
 
     final buttonStyle = ElevatedButton.styleFrom(
-      backgroundColor: Colors.orange[100],
+      backgroundColor: Colors.orange[50],
       foregroundColor: Colors.orange[600], // Lighter text/icon color
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.0),

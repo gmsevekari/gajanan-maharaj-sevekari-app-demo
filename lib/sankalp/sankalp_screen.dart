@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
+import 'package:gajanan_maharaj_sevekari_app_demo/settings/locale_provider.dart';
 import 'package:intl/intl.dart';
+import 'package:provider/provider.dart';
 
 class SankalpScreen extends StatefulWidget {
   const SankalpScreen({super.key});
@@ -16,15 +18,18 @@ class _SankalpScreenState extends State<SankalpScreen> {
 
   void _generateSankalp() {
     final localizations = AppLocalizations.of(context);
-    final formattedDate = DateFormat.yMMMMd().format(_selectedDate);
+    final locale = Provider.of<LocaleProvider>(context, listen: false).locale.languageCode;
+    final formattedDate = DateFormat.yMMMMd(locale).format(_selectedDate);
     setState(() {
       _sankalpText = localizations.getSankalpGenerated(_locationController.text, formattedDate);
     });
   }
 
   Future<void> _selectDate(BuildContext context) async {
+    final locale = Provider.of<LocaleProvider>(context, listen: false).locale;
     final DateTime? picked = await showDatePicker(
       context: context,
+      locale: locale,
       initialDate: _selectedDate,
       firstDate: DateTime(2020), 
       lastDate: DateTime(2030),
@@ -39,9 +44,10 @@ class _SankalpScreenState extends State<SankalpScreen> {
   @override
   Widget build(BuildContext context) {
     final localizations = AppLocalizations.of(context);
+    final locale = Provider.of<LocaleProvider>(context).locale.languageCode;
 
     final buttonStyle = ElevatedButton.styleFrom(
-      backgroundColor: Colors.orange[100],
+      backgroundColor: Colors.orange[50],
       foregroundColor: Colors.orange[600], // Set text color for the button
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.0),
@@ -72,7 +78,7 @@ class _SankalpScreenState extends State<SankalpScreen> {
               children: [
                 Expanded(
                   child: Text(
-                    '${localizations.date}: ${DateFormat.yMMMMd().format(_selectedDate)}',
+                    '${localizations.date}: ${DateFormat.yMMMMd(locale).format(_selectedDate)}',
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
                 ),
