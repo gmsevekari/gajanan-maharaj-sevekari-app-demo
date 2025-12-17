@@ -75,6 +75,7 @@ flutter:
     - resources/texts/aartis/daily/
     - resources/texts/aartis/event/
     - resources/texts/grantha/
+    - resources/texts/namavali/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

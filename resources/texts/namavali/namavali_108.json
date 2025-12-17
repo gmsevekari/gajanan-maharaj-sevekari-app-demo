@@ -1,0 +1,444 @@
+{
+  "names": [
+    {
+      "name_mr": "ॐ अक्षय सुखाय नम:",
+      "name_en": "Om Akshaya Sukhay Namaha"
+    },
+    {
+      "name_mr": "ॐ अयोनिसंभवाय नम:",
+      "name_en": "Om Ayonisambhavay Namaha"
+    },
+    {
+      "name_mr": "ॐ अखिलेशाय नम:",
+      "name_en": "Om Akhileshay Namaha"
+    },
+    {
+      "name_mr": "ॐ अच्युताय नम:",
+      "name_en": "Om Achyutay Namaha"
+    },
+    {
+      "name_mr": "ॐ अभेदाय नम:",
+      "name_en": "Om Abheday Namaha"
+    },
+    {
+      "name_mr": "ॐ अनंताय नम:",
+      "name_en": "Om Anantay Namaha"
+    },
+    {
+      "name_mr": "ॐ अभ्युदयाय नम:",
+      "name_en": "Om Abhyudayay Namaha"
+    },
+    {
+      "name_mr": "ॐ अत्रीपुत्राय नम:",
+      "name_en": "Om Atriputray Namaha"
+    },
+    {
+      "name_mr": "ॐ अखंडाय नम:",
+      "name_en": "Om Akhanday Namaha"
+    },
+    {
+      "name_mr": "ॐ अविनाशिनेन नम:",
+      "name_en": "Om Avinashinen Namaha"
+    },
+    {
+      "name_mr": "ॐ अमरत्वाय नम:",
+      "name_en": "Om Amaratvay Namaha"
+    },
+    {
+      "name_mr": "ॐ अग्न्युत्पत्तिकराय नम:",
+      "name_en": "Om Agnyutpattikaray Namaha"
+    },
+    {
+      "name_mr": "ॐ अग्निशमनाय नम:",
+      "name_en": "Om Agnishamanay Namaha"
+    },
+    {
+      "name_mr": "ॐ अथर्ववेदाय नम:",
+      "name_en": "Om Atharvaveday Namaha"
+    },
+    {
+      "name_mr": "ॐ अधर्मनाशकाय नम:",
+      "name_en": "Om Adharmanashakay Namaha"
+    },
+    {
+      "name_mr": "ॐ आत्मैक्याय नम:",
+      "name_en": "Om Atmaikyay Namaha"
+    },
+    {
+      "name_mr": "ॐ आशुतोषाय नम:",
+      "name_en": "Om Ashutoshay Namaha"
+    },
+    {
+      "name_mr": "ॐ अद्वैताय नम:",
+      "name_en": "Om Advaitay Namaha"
+    },
+    {
+      "name_mr": "ॐ उष्णशीयपर्जन्याय नम:",
+      "name_en": "Om Ushnashiyaparjanyay Namaha"
+    },
+    {
+      "name_mr": "ॐ उपाधिरहिताय नम:",
+      "name_en": "Om Upadhirahitay Namaha"
+    },
+    {
+      "name_mr": "ॐ एकदंताय नम:",
+      "name_en": "Om Ekadantay Namaha"
+    },
+    {
+      "name_mr": "ॐ ऐं वाक्यप्रदाय नम:",
+      "name_en": "Om Aaim VakyaPradaya Namaha"
+    },
+    {
+      "name_mr": "ॐ ऐंश्वर्याय नम:",
+      "name_en": "Om Aishwaryay Namaha"
+    },
+    {
+      "name_mr": "ॐ ओंकारेश्वराय नम:",
+      "name_en": "Om Omkareshwaray Namaha"
+    },
+    {
+      "name_mr": "ॐ औदुंबरकल्पवृक्षाय नम:",
+      "name_en": "Om Audumbarakalpavrukshay Namaha"
+    },
+    {
+      "name_mr": "ॐ ऋषये नम:",
+      "name_en": "Om Hrushaye Namaha"
+    },
+    {
+      "name_mr": "ॐ ऋग्वेदाय नम:",
+      "name_en": "Om Rugveday Namaha"
+    },
+    {
+      "name_mr": "ॐ ऋणमोचनाय नम:",
+      "name_en": "Om Runmochanay Namaha"
+    },
+    {
+      "name_mr": "ॐ कलिमलहदहनाय नम:",
+      "name_en": "Om Kalimalahadahanay Namaha"
+    },
+    {
+      "name_mr": "ॐ कर्पूरगौराय नम:",
+      "name_en": "Om Karpooragauray Namaha"
+    },
+    {
+      "name_mr": "ॐ कालान्तकाय नम:",
+      "name_en": "Om Kalantakay Namaha"
+    },
+    {
+      "name_mr": "ॐ क्लीं कृष्णाय नम:",
+      "name_en": "Om Kleem Krushnay Namaha"
+    },
+    {
+      "name_mr": "ॐ कृतज्ञाय नम:",
+      "name_en": "Om Krutadnyay Namaha"
+    },
+    {
+      "name_mr": "ॐ केशवाय नम:",
+      "name_en": "Om Keshavay Namaha"
+    },
+    {
+      "name_mr": "ॐ कैवल्यधामाय नम:",
+      "name_en": "Om Kaivalyadhamay Namaha"
+    },
+    {
+      "name_mr": "ॐ खं ब्रम्हाय नम:",
+      "name_en": "Om Kham Brahmay Namaha"
+    },
+    {
+      "name_mr": "ॐ गं गणपतये नम:",
+      "name_en": "Om Gam Ganapataye Namaha"
+    },
+    {
+      "name_mr": "ॐ गणाध्यक्षाय नम:",
+      "name_en": "Om Ganadhyakshay Namaha"
+    },
+    {
+      "name_mr": "ॐ गजाननाय नम:",
+      "name_en": "Om Gajananay Namaha"
+    },
+    {
+      "name_mr": "ॐ गुणातीताय नम:",
+      "name_en": "Om Gunatitay Namaha"
+    },
+    {
+      "name_mr": "ॐ गोविंदाय नम:",
+      "name_en": "Om Govinday Namaha"
+    },
+    {
+      "name_mr": "ॐ घृष्णेश्र्वराय नम:",
+      "name_en": "Om Ghrushneshwaray Namaha"
+    },
+    {
+      "name_mr": "ॐ चिरंजीविने नम:",
+      "name_en": "Om Chiranjeevine Namaha"
+    },
+    {
+      "name_mr": "ॐ चैतन्याय नम:",
+      "name_en": "Om Chaitanyay Namaha"
+    },
+    {
+      "name_mr": "ॐ जगध्दीशाय नम:",
+      "name_en": "Om Jagaddhishay Namaha"
+    },
+    {
+      "name_mr": "ॐ जगन्नाथाय नम:",
+      "name_en": "Om Jagannathay Namaha"
+    },
+    {
+      "name_mr": "ॐ जनार्दनाय नम:",
+      "name_en": "Om Janardanay Namaha"
+    },
+    {
+      "name_mr": "ॐ जगध्दीशाय नम:",
+      "name_en": "Om Jagaddhishay Namaha"
+    },
+    {
+      "name_mr": "ॐ जितेंद्रियाय नम:",
+      "name_en": "Om Jitendriyay Namaha"
+    },
+    {
+      "name_mr": "ॐ जीवन्मुक्ताय नम:",
+      "name_en": "Om Jivanmuktay Namaha"
+    },
+    {
+      "name_mr": "ॐ तेजोमयाय नम:",
+      "name_en": "Om Tejomayay Namaha"
+    },
+    {
+      "name_mr": "ॐ तिमिरनाशकाय नम:",
+      "name_en": "Om Timiranashakay Namaha"
+    },
+    {
+      "name_mr": "ॐ तत्पुरूषाय नम:",
+      "name_en": "Om Tatpurushay Namaha"
+    },
+    {
+      "name_mr": "ॐ तुर्यातीताय नम:",
+      "name_en": "Om Turyatitatay Namaha"
+    },
+    {
+      "name_mr": "ॐ दयानिधये नम:",
+      "name_en": "Om Dayanidhaye Namaha"
+    },
+    {
+      "name_mr": "ॐ दत्तात्रेयाय नम:",
+      "name_en": "Om Dattatreyay Namaha"
+    },
+    {
+      "name_mr": "ॐ दिव्याय नम:",
+      "name_en": "Om Divyay Namaha"
+    },
+    {
+      "name_mr": "ॐ दिगंबराय नम:",
+      "name_en": "Om Digambaray Namaha"
+    },
+    {
+      "name_mr": "ॐ दु:खभंजनाय नम:",
+      "name_en": "Om Dukkhabhanjanay Namaha"
+    },
+    {
+      "name_mr": "ॐ देवाधिवाय नम:",
+      "name_en": "Om Devadhivay Namaha"
+    },
+    {
+      "name_mr": "ॐ धर्मरक्षकाय नम:",
+      "name_en": "Om Dharmarakshakay Namaha"
+    },
+    {
+      "name_mr": "ॐ नग्नाऽवधूता नम:",
+      "name_en": "Om Nagnavadhutay Namaha"
+    },
+    {
+      "name_mr": "ॐ नारायणाय नम:",
+      "name_en": "Om Narayanay Namaha"
+    },
+    {
+      "name_mr": "ॐ निर्विकाराय नम:",
+      "name_en": "Om Nirvikaray Namaha"
+    },
+    {
+      "name_mr": "ॐ निरंजनाय नम:",
+      "name_en": "Om Niranjanay Namaha"
+    },
+    {
+      "name_mr": "ॐ नित्यशुद्धाय नम:",
+      "name_en": "Om Nityashuddhay Namaha"
+    },
+    {
+      "name_mr": "ॐ पुरूषोत्तमाय नम:",
+      "name_en": "Om Purushottamay Namaha"
+    },
+    {
+      "name_mr": "ॐ पतितोध्दारकाय नम:",
+      "name_en": "Om Patitoddharakay Namaha"
+    },
+    {
+      "name_mr": "ॐ परमात्मने नम:",
+      "name_en": "Om Paramatmane Namaha"
+    },
+    {
+      "name_mr": "ॐ पुण्यपुरूषाय नम:",
+      "name_en": "Om Punyapurushay Namaha"
+    },
+    {
+      "name_mr": "ॐ परब्रह्स्वरूपिणे नम:",
+      "name_en": "Om Parabrahmaswarupine Namaha"
+    },
+    {
+      "name_mr": "ॐ परमहंसाय नम:",
+      "name_en": "Om Paramahamsay Namaha"
+    },
+    {
+      "name_mr": "ॐ प्रत्यक्षाय नम:",
+      "name_en": "Om Pratyakshay Namaha"
+    },
+    {
+      "name_mr": "ॐ परोक्षाय नम:",
+      "name_en": "Om Parokshay Namaha"
+    },
+    {
+      "name_mr": "ॐ परात्पराय नम:",
+      "name_en": "Om Paratparay Namaha"
+    },
+    {
+      "name_mr": "ॐ प्रसन्नवदनाय नम:",
+      "name_en": "Om Prasannavadanay Namaha"
+    },
+    {
+      "name_mr": "ॐ परेशाय नम:",
+      "name_en": "Om Pareshay Namaha"
+    },
+    {
+      "name_mr": "ॐ पापचविमोचनाय नम:",
+      "name_en": "Om Papachavimochanay Namaha"
+    },
+    {
+      "name_mr": "ॐ ब्रह्मांडनायकाय नम:",
+      "name_en": "Om Brahmandanayakay Namaha"
+    },
+    {
+      "name_mr": "ॐ ब्रह्मरूपाय नम:",
+      "name_en": "Om Brahmarupay Namaha"
+    },
+    {
+      "name_mr": "ॐ भक्तवत्सलाय नम:",
+      "name_en": "Om Bhaktavatsalay Namaha"
+    },
+    {
+      "name_mr": "ॐ भक्ततारकाय नम:",
+      "name_en": "Om Bhaktatarakay Namaha"
+    },
+    {
+      "name_mr": "ॐ भजनप्रियाय नम:",
+      "name_en": "Om Bhajanapriyay Namaha"
+    },
+    {
+      "name_mr": "ॐ भागवतधर्माय नम:",
+      "name_en": "Om Bhagavatadharmay Namaha"
+    },
+    {
+      "name_mr": "ॐ भूमंडलाचार्याय नम:",
+      "name_en": "Om Bhumandalacharyay Namaha"
+    },
+    {
+      "name_mr": "ॐ महादेवाय नम:",
+      "name_en": "Om Mahadevay Namaha"
+    },
+    {
+      "name_mr": "ॐ मृत्युंजयाय नम:",
+      "name_en": "Om Mrutyunjayay Namaha"
+    },
+    {
+      "name_mr": "ॐ महासिध्दाय नम:",
+      "name_en": "Om Mahasiddhay Namaha"
+    },
+    {
+      "name_mr": "ॐ यजुर्वेदाय नम:",
+      "name_en": "Om Yajurveday Namaha"
+    },
+    {
+      "name_mr": "ॐ योगेश्र्वराय नम:",
+      "name_en": "Om Yogeshwaray Namaha"
+    },
+    {
+      "name_mr": "ॐ रां रामाय नम:",
+      "name_en": "Om Ram Ramay Namaha"
+    },
+    {
+      "name_mr": "ॐ रामदासाय नम:",
+      "name_en": "Om Ramadasay Namaha"
+    },
+    {
+      "name_mr": "ॐ लंबोदराय नम:",
+      "name_en": "Om Lambodaray Namaha"
+    },
+    {
+      "name_mr": "ॐ विष्णवे नम:",
+      "name_en": "Om Vishnave Namaha"
+    },
+    {
+      "name_mr": "ॐ विश्वदेवाय नम:",
+      "name_en": "Om Vishvadevay Namaha"
+    },
+    {
+      "name_mr": "ॐ वेदपुरषाय नम:",
+      "name_en": "Om Vedapurushay Namaha"
+    },
+    {
+      "name_mr": "ॐ वेदप्रियाय नम:",
+      "name_en": "Om Vedapriyay Namaha"
+    },
+    {
+      "name_mr": "ॐ शिवस्वरूपाय नम:",
+      "name_en": "Om Shivaswarupay Namaha"
+    },
+    {
+      "name_mr": "ॐ शेगांवनिवासिने नम:",
+      "name_en": "Om Shegavannivasine Namaha"
+    },
+    {
+      "name_mr": "ॐ स्मर्तूगामिने नम:",
+      "name_en": "Om Smartugamine Namaha"
+    },
+    {
+      "name_mr": "ॐ स्मरणमात्रसंतुष्टाय नम:",
+      "name_en": "Om Smarana-matra-santushtay Namaha"
+    },
+    {
+      "name_mr": "ॐ सर्वयंत्रमंत्रतंत्रस्वरूपाय नम:",
+      "name_en": "Om Sarva-yantra-mantra-tantra-swarupay Namaha"
+    },
+    {
+      "name_mr": "ॐ सर्वसंपुष्टपल्लवस्वरूपाय नम:",
+      "name_en": "Om Sarva-sampushta-pallav-swarupay Namaha"
+    },
+    {
+      "name_mr": "ॐ सर्वज्ञाय नम:",
+      "name_en": "Om Sarvadnyay Namaha"
+    },
+    {
+      "name_mr": "ॐ सचिदानंदांय नम:",
+      "name_en": "Om Sachidananday Namaha"
+    },
+    {
+      "name_mr": "ॐ सामवेदाय नम:",
+      "name_en": "Om Samaveday Namaha"
+    },
+    {
+      "name_mr": "ॐ श्रीगुरूदेवाय नम:",
+      "name_en": "Om Shrigurudevay Namaha"
+    },
+    {
+      "name_mr": "ॐ हरिहराय नम:",
+      "name_en": "Om Hariharay Namaha"
+    },
+    {
+      "name_mr": "ॐ ज्ञानेशाय नम:",
+      "name_en": "Om Dnyaneshay Namaha"
+    },
+    {
+      "name_mr": "ॐ श्री गजानन महाराजय नम:",
+      "name_en": "Om Shri Gajanan Maharajay Namaha"
+    }
+  ]
+}
