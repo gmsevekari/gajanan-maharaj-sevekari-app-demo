@@ -14,7 +14,7 @@ class DonationsScreen extends StatelessWidget {
       foregroundColor: Colors.orange[600], // Lighter text/icon color
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.0),
-        side: BorderSide(color: Colors.orange.withOpacity(0.5), width: 1),
+        side: BorderSide(color: Colors.orange.withAlpha(128), width: 1),
       ),
       padding: const EdgeInsets.symmetric(vertical: 16.0),
       textStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),

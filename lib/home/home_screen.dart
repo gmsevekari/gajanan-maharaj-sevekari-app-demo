@@ -82,7 +82,7 @@ class HomeScreen extends StatelessWidget {
         color: Colors.orange[50],
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(12.0),
-          side: BorderSide(color: Colors.orange.withOpacity(0.5), width: 1),
+          side: BorderSide(color: Colors.orange.withAlpha(128), width: 1),
         ),
         margin: const EdgeInsets.all(8.0),
         child: Padding(
@@ -113,7 +113,7 @@ class HomeScreen extends StatelessWidget {
       color: Colors.orange[50],
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.0),
-        side: BorderSide(color: Colors.orange.withOpacity(0.5), width: 1),
+        side: BorderSide(color: Colors.orange.withAlpha(128), width: 1),
       ),
       child: InkWell(
         onTap: () => Navigator.pushNamed(context, route),

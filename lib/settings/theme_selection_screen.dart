@@ -65,7 +65,7 @@ class ThemeSelectionScreen extends StatelessWidget {
       color: cardColor,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.0),
-        side: BorderSide(color: isSelected ? Colors.orange : Colors.grey.withOpacity(0.5), width: 1),
+        side: BorderSide(color: isSelected ? Colors.orange : Colors.grey.withAlpha(128), width: 1),
       ),
       margin: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
       child: ListTile(

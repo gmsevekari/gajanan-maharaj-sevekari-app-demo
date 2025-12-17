@@ -31,7 +31,7 @@ class AartiScreen extends StatelessWidget {
       color: Colors.orange[50],
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.0),
-        side: BorderSide(color: Colors.orange.withOpacity(0.5), width: 1),
+        side: BorderSide(color: Colors.orange.withAlpha(128), width: 1),
       ),
       margin: const EdgeInsets.symmetric(vertical: 8.0, horizontal: 8.0),
       child: InkWell(

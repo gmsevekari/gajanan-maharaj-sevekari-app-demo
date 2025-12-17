@@ -88,7 +88,7 @@ class _ParayanProgressChecklistScreenState
       color: Colors.orange[50],
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.0),
-        side: BorderSide(color: Colors.orange.withOpacity(0.5), width: 1),
+        side: BorderSide(color: Colors.orange.withAlpha(128), width: 1),
       ),
       margin: const EdgeInsets.all(8.0),
       child: Padding(
@@ -122,7 +122,7 @@ class _ParayanProgressChecklistScreenState
       color: _completedAdhyays[adhyayIndex] ? Colors.green[100] : Colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(10.0),
-        side: BorderSide(color: _completedAdhyays[adhyayIndex] ? Colors.green : Colors.grey.withOpacity(0.5), width: 1),
+        side: BorderSide(color: _completedAdhyays[adhyayIndex] ? Colors.green : Colors.grey.withAlpha(128), width: 1),
       ),
       margin: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
       child: CheckboxListTile(

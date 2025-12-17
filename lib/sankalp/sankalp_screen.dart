@@ -51,7 +51,7 @@ class _SankalpScreenState extends State<SankalpScreen> {
       foregroundColor: Colors.orange[600], // Set text color for the button
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(12.0),
-        side: BorderSide(color: Colors.orange.withOpacity(0.5), width: 1),
+        side: BorderSide(color: Colors.orange.withAlpha(128), width: 1),
       ),
       padding: const EdgeInsets.symmetric(vertical: 12.0, horizontal: 16.0),
       textStyle: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
@@ -105,7 +105,7 @@ class _SankalpScreenState extends State<SankalpScreen> {
                 color: Colors.orange[50],
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(12.0),
-                  side: BorderSide(color: Colors.orange.withOpacity(0.5), width: 1),
+                  side: BorderSide(color: Colors.orange.withAlpha(128), width: 1),
                 ),
                 child: Padding(
                   padding: const EdgeInsets.all(16.0),

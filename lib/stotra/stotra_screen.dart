@@ -17,7 +17,16 @@ class _StotraScreenState extends State<StotraScreen> {
 
   final List<String> _stotraFiles = [
     'gajanan_maharaj_avahan.json',
+    'gajanan_maharaj_ashtak.json',
     'gajanan_maharaj_bavanni.json',
+    'gajanan_maharaj_21_namaskar.json',
+    'gajanan_maharaj_sumananjali.json',
+    'gajanan_maharaj_stotra_dasganu_maharaj_krut.json',
+    'gajanan_maharaj_prachiti.json',
+    'gajanan_maharaj_stotra_kasturicha_mrug.json',
+    'gajanan_maharaj_stotra_yogi_rana.json',
+    'gajananache_modak.json',
+    'gajanan_maharaj_chalisa.json',
   ];
 
   @override
@@ -70,7 +79,7 @@ class _StotraScreenState extends State<StotraScreen> {
                   color: Colors.orange[50],
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12.0),
-                    side: BorderSide(color: Colors.orange.withOpacity(0.5), width: 1),
+                    side: BorderSide(color: Colors.orange.withAlpha(128), width: 1),
                   ),
                   margin: const EdgeInsets.symmetric(horizontal: 8.0, vertical: 4.0),
                   child: ListTile(
