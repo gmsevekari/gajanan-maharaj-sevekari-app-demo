@@ -3,13 +3,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class LocaleProvider with ChangeNotifier {
   static const String _localePrefKey = 'locale_code';
-  Locale _locale = const Locale('en'); // Default to English
+  Locale _locale = const Locale('mr'); // Default to Marathi
 
   Locale get locale => _locale;
 
   Future<void> loadLocale() async {
     final prefs = await SharedPreferences.getInstance();
-    final localeCode = prefs.getString(_localePrefKey) ?? 'en'; // Default to English
+    final localeCode = prefs.getString(_localePrefKey) ?? 'mr'; // Default to Marathi
     _locale = Locale(localeCode);
     notifyListeners();
   }
