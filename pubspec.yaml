@@ -113,7 +113,5 @@ flutter_launcher_icons:
 
 flutter_native_splash:
   color: "#FFA500"
-  image: resources/images/splash/App_Splash.png
   android_12:
     color: "#FFA500"
-    image: resources/images/splash/App_Splash.png

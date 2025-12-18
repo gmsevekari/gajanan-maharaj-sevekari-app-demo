@@ -15,6 +15,7 @@ import 'package:gajanan_maharaj_sevekari_app_demo/sankalp/sankalp_screen.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/settings/locale_provider.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/settings/settings_screen.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/settings/theme_provider.dart';
+import 'package:gajanan_maharaj_sevekari_app_demo/splash/splash_screen.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/stotra/stotra_screen.dart';
 import 'package:gajanan_maharaj_sevekari_app_demo/utils/routes.dart';
 import 'package:provider/provider.dart';
@@ -58,8 +59,9 @@ class MyApp extends StatelessWidget {
             GlobalWidgetsLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
           ],
-          initialRoute: Routes.home,
+          initialRoute: Routes.splash,
           routes: {
+            Routes.splash: (context) => const SplashScreen(),
             Routes.home: (context) => const HomeScreen(),
             Routes.granth: (context) => const GranthScreen(),
             Routes.stotra: (context) => const StotraScreen(),
