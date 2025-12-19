@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/parayan/parayan_progress_checklist_screen.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/parayan/parayan_type.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/utils/routes.dart';
+import 'package:gajanan_maharaj_sevekari/l10n/app_localizations.dart';
+import 'package:gajanan_maharaj_sevekari/parayan/parayan_progress_checklist_screen.dart';
+import 'package:gajanan_maharaj_sevekari/parayan/parayan_type.dart';
+import 'package:gajanan_maharaj_sevekari/utils/routes.dart';
 
 class ParayanScreen extends StatelessWidget {
   const ParayanScreen({super.key});

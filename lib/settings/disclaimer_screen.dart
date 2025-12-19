@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
+import 'package:gajanan_maharaj_sevekari/l10n/app_localizations.dart';
 
 class DisclaimerScreen extends StatelessWidget {
   const DisclaimerScreen({super.key});

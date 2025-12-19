@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:33491188906:android:e939d3abd6b679c9c6e4d3",
+        "mobilesdk_app_id": "1:33491188906:android:cdea10b7acfc04b7c6e4d3",
         "android_client_info": {
-          "package_name": "com.example.gajanan_maharaj_sevekari_app_demo"
+          "package_name": "com.gajanan.maharaj.sevekari"
         }
       },
       "oauth_client": [],

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/utils/routes.dart';
+import 'package:gajanan_maharaj_sevekari/l10n/app_localizations.dart';
+import 'package:gajanan_maharaj_sevekari/utils/routes.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class DonationsScreen extends StatelessWidget {
@@ -40,12 +40,7 @@ class DonationsScreen extends StatelessWidget {
             Text(
               localizations.donationInstruction,
               textAlign: TextAlign.center,
-              style: Theme
-                  .of(context)
-                  .textTheme
-                  .titleLarge
-                  ?.copyWith(color: Colors.orange)
-                  .copyWith(fontWeight: FontWeight.bold),
+              style: Theme.of(context).textTheme.titleLarge?.copyWith(color: Colors.orange).copyWith(fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 20),
             // QR code image

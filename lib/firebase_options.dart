@@ -48,17 +48,17 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions web = FirebaseOptions(
     apiKey: 'AIzaSyD-d9bKzLkDylQiOT5_ZsqbejsB-nfmjBE',
-    appId: '1:33491188906:web:1793b610944f774dc6e4d3',
+    appId: '1:33491188906:web:7aa4a94b03374815c6e4d3',
     messagingSenderId: '33491188906',
     projectId: 'app-event-calendar',
     authDomain: 'app-event-calendar.firebaseapp.com',
     storageBucket: 'app-event-calendar.firebasestorage.app',
-    measurementId: 'G-NSKYWMS7TK',
+    measurementId: 'G-HXZ0FDWKW5',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDLORajkeC3JlsVzZFhWr_fqmDJRZPs2Lc',
-    appId: '1:33491188906:android:e939d3abd6b679c9c6e4d3',
+    appId: '1:33491188906:android:cdea10b7acfc04b7c6e4d3',
     messagingSenderId: '33491188906',
     projectId: 'app-event-calendar',
     storageBucket: 'app-event-calendar.firebasestorage.app',
@@ -66,10 +66,11 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyCyvfr4i7aFe_Eaf1g6Ft3NDz8lFqgdsFQ',
-    appId: '1:33491188906:ios:55734018aa3e2614c6e4d3',
+    appId: '1:33491188906:ios:319db3d82ad043dfc6e4d3',
     messagingSenderId: '33491188906',
     projectId: 'app-event-calendar',
     storageBucket: 'app-event-calendar.firebasestorage.app',
     iosBundleId: 'com.example.gajananMaharajSevekariAppDemo',
   );
+
 }

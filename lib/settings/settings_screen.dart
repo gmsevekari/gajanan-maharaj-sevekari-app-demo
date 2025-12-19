@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/settings/about_app_screen.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/settings/disclaimer_screen.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/settings/language_selection_screen.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/settings/theme_selection_screen.dart';
+import 'package:gajanan_maharaj_sevekari/l10n/app_localizations.dart';
+import 'package:gajanan_maharaj_sevekari/settings/about_app_screen.dart';
+import 'package:gajanan_maharaj_sevekari/settings/disclaimer_screen.dart';
+import 'package:gajanan_maharaj_sevekari/settings/language_selection_screen.dart';
+import 'package:gajanan_maharaj_sevekari/settings/theme_selection_screen.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});

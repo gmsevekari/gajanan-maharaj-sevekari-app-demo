@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/l10n/app_localizations.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/utils/routes.dart';
+import 'package:gajanan_maharaj_sevekari/l10n/app_localizations.dart';
+import 'package:gajanan_maharaj_sevekari/utils/routes.dart';
 
 class AboutMaharajScreen extends StatefulWidget {
   const AboutMaharajScreen({super.key});

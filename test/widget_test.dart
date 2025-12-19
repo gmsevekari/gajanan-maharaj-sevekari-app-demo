@@ -6,8 +6,8 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/main.dart';
-import 'package:gajanan_maharaj_sevekari_app_demo/settings/theme_provider.dart';
+import 'package:gajanan_maharaj_sevekari/main.dart';
+import 'package:gajanan_maharaj_sevekari/settings/theme_provider.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
