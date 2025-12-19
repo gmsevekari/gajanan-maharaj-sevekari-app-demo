@@ -100,7 +100,7 @@ class _SankalpScreenState extends State<SankalpScreen> {
             const SizedBox(height: 24.0),
             ElevatedButton(
               style: buttonStyle.copyWith(
-                padding: MaterialStateProperty.all(const EdgeInsets.symmetric(vertical: 16.0)),
+                padding: WidgetStateProperty.all(const EdgeInsets.symmetric(vertical: 16.0)),
               ),
               onPressed: _generateSankalp,
               child: Text(localizations.generateSankalp),

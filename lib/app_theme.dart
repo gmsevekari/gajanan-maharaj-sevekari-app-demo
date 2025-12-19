@@ -13,14 +13,14 @@ class AppTheme {
       primary: Colors.orange,
       secondary: Colors.amber,
       brightness: Brightness.light,
-    ).copyWith(background: Colors.white),
+    ).copyWith(surface: Colors.white),
   );
 
   static final ThemeData darkTheme = ThemeData(
     primarySwatch: Colors.orange,
     visualDensity: VisualDensity.adaptivePlatformDensity,
     appBarTheme: const AppBarTheme(
-      color: Colors.orange,
+      backgroundColor: Colors.orange,
       foregroundColor: Colors.white,
     ),
     colorScheme: ColorScheme.fromSeed(
